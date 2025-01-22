@@ -1,28 +1,105 @@
-  body {
-    font-family: 'Helvetica';
-    padding: 20px;
-    width: 300px; 
-    height: 100px;
+body {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  background: #f0f0f0;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 10px; 
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#subreddit-label {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+#subreddit-input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#post-container {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  min-height: 80px;
+  flex-grow: 1;
+  overflow-y: auto; /* To handle long posts */
+  margin-right: 50px; /* To leave space for the buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#post {
+  text-align: center;
+}
+
+
+#loading-spinner {
+  border: 4px solid #f0f0f0;
+  border-top: 4px solid #151616;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+#controls {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+button {
+  padding: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:disabled {
+  display: none;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  #post-container {
-    text-align: center;
+  to {
+    transform: rotate(360deg);
   }
-  
-  #post-content {
-    margin-bottom: 20px;
-  }
-  
-  #next-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  #next-button:hover {
-    background-color: #0056b3;
-  }
-  
+}

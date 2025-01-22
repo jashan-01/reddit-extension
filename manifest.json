@@ -2,8 +2,10 @@
   "manifest_version": 3,
   "name": "Everyday I Learn",
   "version": "1.0",
-  "description": "Displays a random post from a Today I Learned subreddit.",
-  "permissions": ["activeTab"],
+  "description": "Reddit Post Shuffle",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://www.reddit.com/*"],
+
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -16,7 +18,6 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  },
+  }
   
-  "permissions": ["storage"]
 }

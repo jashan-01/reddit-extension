@@ -3,13 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TIL Post</title>
+  <title>Reddit Shuffle</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div id="post-container">
-    <p id="post-content"></p>
-    <button id="next-button">Next button</button>
+  <div id="container">
+    <div id="header">
+      <span id="subreddit-label">r/</span>
+      <input type="text" id="subreddit-input" placeholder="Enter subreddit" />
+    </div>
+    <div id="post-container" class="hidden">
+      <div id="post">
+        <div id="loading-spinner" class="hidden"></div>
+        <div id="post-text"></div>
+      </div>
+    </div>
+    <div id="controls" class="hidden">
+      <button id="link-btn" disabled>
+        <img src="link-icon.png" alt="Link" />
+      </button>
+      <button id="next-btn" disabled>
+        <img src="next-icon.png" alt="Next" />
+      </button>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>

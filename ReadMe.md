@@ -1,6 +1,6 @@
-# Everyday I Learn Chrome Extension
+# Reddit Chrome Extension
 
-This Chrome extension displays a random post from a Today I Learned (TIL) subreddit each time it's opened. It includes a "Next" button to shuffle through posts.
+This Chrome extension displays a random post from subreddit each time it's opened. It includes a "Next" button to shuffle through posts.
 
 
 ## Installation
